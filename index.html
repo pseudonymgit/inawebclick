@@ -15,186 +15,127 @@
       background: #f8f7f4;
       color: #1d1d1f;
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem 4rem;
     }
-    .serif { font-family: 'DM Serif Display', serif; }
-
-    nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      background: rgba(248,247,244,0.92);
-      backdrop-filter: blur(12px);
-      z-index: 100;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    .nav-inner {
-      max-width: 1200px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1rem 2rem;
-    }
-    .nav-logo { font-weight: 800; font-size: 1.25rem; color: #1d1d1f; text-decoration: none; letter-spacing: -0.02em; }
-    .nav-logo span { color: #7c5cfc; }
-    .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a { text-decoration: none; color: #555; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
-    .nav-links a:hover { color: #1d1d1f; }
-
-    .hero {
-      padding: 10rem 2rem 4rem;
+    .header {
       text-align: center;
-      max-width: 800px; margin: 0 auto;
+      margin-bottom: 3rem;
     }
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
+    .header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: #1d1d1f;
+      margin-bottom: 0.5rem;
     }
-    .hero h1 span { color: #7c5cfc; }
-    .hero p {
-      font-size: 1.2rem;
-      color: #666;
-      max-width: 600px; margin: 0 auto 2rem;
-    }
-    .hero-cta {
-      display: inline-block;
-      background: #7c5cfc;
-      color: #fff;
-      font-weight: 700;
+    .header p {
+      color: #888;
       font-size: 1rem;
-      padding: 0.9rem 2.5rem;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .hero-cta:hover { background: #6a45f0; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(124,92,252,0.3); }
-
-    .section-header {
-      text-align: center;
-      max-width: 600px; margin: 0 auto 3rem;
-    }
-    .section-header h2 {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      letter-spacing: -0.02em;
-      margin-bottom: 0.75rem;
-    }
-    .section-header p { color: #888; font-size: 1.05rem; }
-
-    .portfolio {
-      padding: 4rem 2rem 5rem;
-      max-width: 1200px; margin: 0 auto;
     }
     .grid {
+      max-width: 900px;
+      width: 100%;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
     }
     .card {
       background: #fff;
-      border-radius: 16px;
-      padding: 1.75rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
-      transition: all 0.25s;
+      border-radius: 14px;
+      padding: 1.5rem;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.2s;
       display: flex;
       flex-direction: column;
-      border: 1px solid rgba(0,0,0,0.04);
     }
     .card:hover {
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      transform: translateY(-4px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      transform: translateY(-3px);
     }
-    .card-emoji { font-size: 2.5rem; margin-bottom: 0.75rem; line-height: 1; }
-    .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; }
-    .card p { font-size: 0.9rem; color: #888; margin-bottom: 1.25rem; flex: 1; }
-    .card-link {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      color: #7c5cfc; font-weight: 600; font-size: 0.9rem;
-      text-decoration: none; transition: gap 0.2s;
+    .card-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
     }
-    .card-link:hover { gap: 0.75rem; }
-
-    footer {
-      border-top: 1px solid rgba(0,0,0,0.06);
-      padding: 2rem;
-      text-align: center;
-      color: #999;
+    .card-emoji {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .card p {
       font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 1rem;
+      flex: 1;
     }
-
+    .card-link {
+      color: #7c5cfc;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .card-link:hover { gap: 0.6rem; }
+    .footer {
+      margin-top: 3rem;
+      color: #bbb;
+      font-size: 0.8rem;
+      text-align: center;
+    }
     @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hero { padding: 7rem 1.5rem 3rem; }
+      body { padding: 2rem 1rem 3rem; }
       .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">In a Web <span>Click</span></a>
-      <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#contact">Get Started</a>
-      </div>
+  <div class="header">
+    <h1>In a Web Click</h1>
+    <p>From design to live site</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-row"><span class="card-emoji">🪠</span><h3>Pipe Dream LLC</h3></div>
+      <p>Plumbing services</p>
+      <a class="card-link" href="https://pseudonymgit.github.io/pipe-dream-llc/" target="_blank">Open site →</a>
     </div>
-  </nav>
-
-  <section class="hero">
-    <h1>Professional websites, <br>deployed in <span>minutes</span>.</h1>
-    <p>From design export to live site — we handle the deployment so you don't have to. Clean, fast, and ready for your domain.</p>
-    <a href="#work" class="hero-cta">View Our Work</a>
-  </section>
-
-  <section class="portfolio" id="work">
-    <div class="section-header">
-      <h2 class="serif">Client Sites</h2>
-      <p>Every site is hand-polished and deployed to its own live URL.</p>
+    <div class="card">
+      <div class="card-row"><span class="card-emoji">🥟</span><h3>Golden Dragon</h3></div>
+      <p>Chinese restaurant</p>
+      <a class="card-link" href="https://pseudonymgit.github.io/golden-dragon/" target="_blank">Open site →</a>
     </div>
-    <div class="grid">
-      <div class="card">
-        <div class="card-emoji">🪠</div>
-        <h3>Pipe Dream LLC</h3>
-        <p>Plumbing services — professional, reliable, ready for business.</p>
-        <a class="card-link" href="https://pseudonymgit.github.io/pipe-dream-llc/" target="_blank">Open site →</a>
-      </div>
-      <div class="card">
-        <div class="card-emoji">🥟</div>
-        <h3>Golden Dragon</h3>
-        <p>Chinese restaurant — menu, gallery, full online presence.</p>
-        <a class="card-link" href="https://pseudonymgit.github.io/golden-dragon/" target="_blank">Open site →</a>
-      </div>
-      <div class="card">
-        <div class="card-emoji">💅</div>
-        <h3>Nailed It</h3>
-        <p>Nail salon — beauty, precision, quality service.</p>
-        <a class="card-link" href="https://pseudonymgit.github.io/nailed-it/" target="_blank">Open site →</a>
-      </div>
-      <div class="card">
-        <div class="card-emoji">⏱️</div>
-        <h3>Clock Tick</h3>
-        <p>Logistics &amp; consulting — keeping operations on schedule.</p>
-        <a class="card-link" href="https://pseudonymgit.github.io/clock-tick/" target="_blank">Open site →</a>
-      </div>
-      <div class="card">
-        <div class="card-emoji">🧠</div>
-        <h3>Joyous Psych</h3>
-        <p>Psych evals and student advocacy — compassionate and thorough.</p>
-        <a class="card-link" href="https://pseudonymgit.github.io/joyous-psych/" target="_blank">Open site →</a>
-      </div>
-      <div class="card">
-        <div class="card-emoji">🏠</div>
-        <h3>Chaz Flores</h3>
-        <p>Real estate — finding the perfect home for every client.</p>
-        <a class="card-link" href="https://pseudonymgit.github.io/chaz-flores/" target="_blank">Open site →</a>
-      </div>
+    <div class="card">
+      <div class="card-row"><span class="card-emoji">💅</span><h3>Nailed It</h3></div>
+      <p>Nail salon</p>
+      <a class="card-link" href="https://pseudonymgit.github.io/nailed-it/" target="_blank">Open site →</a>
     </div>
-  </section>
+    <div class="card">
+      <div class="card-row"><span class="card-emoji">⏱️</span><h3>Clock Tick</h3></div>
+      <p>Logistics &amp; consulting</p>
+      <a class="card-link" href="https://pseudonymgit.github.io/clock-tick/" target="_blank">Open site →</a>
+    </div>
+    <div class="card">
+      <div class="card-row"><span class="card-emoji">🧠</span><h3>Joyous Psych</h3></div>
+      <p>Psych evals and student advocacy</p>
+      <a class="card-link" href="https://pseudonymgit.github.io/joyous-psych/" target="_blank">Open site →</a>
+    </div>
+    <div class="card">
+      <div class="card-row"><span class="card-emoji">🏠</span><h3>Chaz Flores</h3></div>
+      <p>Real estate</p>
+      <a class="card-link" href="https://pseudonymgit.github.io/chaz-flores/" target="_blank">Open site →</a>
+    </div>
+  </div>
 
-  <section class="cta-section" id="contact">
-    <h2 class="serif">Ready for a site?</h2>
-    <p>Have a design export or just an idea? We'll get it live.</p>
-    <a href="mailto:in@inawebclick.com" class="hero-cta">Get Started</a>
-  </section>
-
-  <footer>
-    &copy; 2026 In a Web Click. Professional websites, deployed fast.
-  </footer>
+  <div class="footer">&copy; 2026 In a Web Click</div>
 </body>
 </html>

@@ -33,7 +33,6 @@
       color: #888;
       font-size: 1.05rem;
     }
-    /* Horizontal rule */
     hr {
       border: none;
       border-top: 1px solid rgba(0,0,0,0.07);
@@ -47,7 +46,7 @@
       max-width: 1080px;
       margin: 0 auto;
     }
-        .section-label {
+    .section-label {
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
@@ -61,25 +60,97 @@
       gap: 1rem;
     }
     .card {
-      background: #fff;
       border-radius: 14px;
-      padding: 1.5rem;
-      border: 1px solid rgba(0,0,0,0.05);
       text-decoration: none;
       color: inherit;
-      transition: all 0.2s;
+      transition: all 0.25s;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
     }
     .card:hover {
-      box-shadow: 0 6px 24px rgba(0,0,0,0.07);
-      transform: translateY(-3px);
-      border-color: #7c5cfc;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+      transform: translateY(-4px);
     }
-    .card-emoji { font-size: 2rem; margin-bottom: 0.5rem; line-height: 1; }
-    .card h3 { font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem; }
-    .card p { font-size: 0.85rem; color: #888; flex: 1; }
-    .card .arrow { margin-top: 0.75rem; color: #7c5cfc; font-weight: 600; font-size: 0.85rem; }
+
+    /* ── Preview thumbnail ── */
+    .card-thumb {
+      aspect-ratio: 16 / 10;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-thumb .brand-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+    }
+    .card-thumb .mockup {
+      position: relative;
+      width: 85%;
+      height: 75%;
+      background: rgba(255,255,255,0.15);
+      border-radius: 8px;
+      backdrop-filter: blur(2px);
+      display: flex;
+      flex-direction: column;
+      padding: 0.65rem 0.65rem 0.4rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+    .mockup .mock-bar {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .mockup .mock-bar span {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+    }
+    .mockup .mock-line {
+      height: 3px;
+      border-radius: 2px;
+      margin-bottom: 4px;
+      background: rgba(255,255,255,0.25);
+    }
+    .mockup .mock-line:nth-child(3) { width: 60%; }
+    .mockup .mock-line:nth-child(4) { width: 40%; }
+    .mockup .mock-block {
+      flex: 1;
+      border-radius: 4px;
+      margin-top: 4px;
+      background: rgba(255,255,255,0.10);
+    }
+    .card-thumb .emoji-overlay {
+      position: absolute;
+      bottom: 10px;
+      right: 12px;
+      font-size: 1.6rem;
+      opacity: 0.5;
+    }
+
+    /* ── Card body ── */
+    .card-body {
+      padding: 0.75rem 1rem 1rem;
+      background: #fff;
+    }
+    .card-body h3 { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.15rem; }
+    .card-body p { font-size: 0.8rem; color: #888; }
+
+    /* ── Per-site brand thumbnails ── */
+    .thumb-pipe    { background: linear-gradient(135deg, #1A3C34 0%, #4A7C59 50%, #2D5A3E 100%); }
+    .thumb-golden  { background: linear-gradient(135deg, #C41E3A 0%, #D4A017 50%, #8B0000 100%); }
+    .thumb-nailed  { background: linear-gradient(135deg, #1A1A2E 0%, #C9A96E 50%, #16213E 100%); }
+    .thumb-clock   { background: linear-gradient(135deg, #0D1B2A 0%, #1B4965 50%, #0A1628 100%); }
+    .thumb-joyous  { background: linear-gradient(135deg, #5D76CB 0%, #7F9FFF 50%, #3D5A99 100%); }
+    .thumb-chaz    { background: linear-gradient(135deg, #2C3E50 0%, #8E44AD 50%, #1A252F 100%); }
+    .thumb-wedding { background: linear-gradient(135deg, #7F9FFF 0%, #36454F 50%, #5B7FFF 100%); }
+    .thumb-frank   { background: linear-gradient(135deg, #8B4513 0%, #D4A574 50%, #A0522D 100%); }
 
     /* ── Process ── */
     .process {
@@ -169,52 +240,133 @@
     <p class="section-label">Our work</p>
     <div class="grid">
       <a class="card" href="https://pseudonymgit.github.io/pipe-dream-llc/" target="_blank">
-        <div class="card-emoji">🪠</div>
-        <h3>Pipe Dream LLC</h3>
-        <p>Plumbing services</p>
-        <div class="arrow">View site →</div>
+        <div class="card-thumb thumb-pipe">
+          <div class="brand-bar" style="background:#D9784B"></div>
+          <div class="mockup">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
+          </div>
+          <div class="emoji-overlay">🪠</div>
+        </div>
+        <div class="card-body">
+          <h3>Pipe Dream LLC</h3>
+          <p>Plumbing services</p>
+        </div>
       </a>
       <a class="card" href="https://pseudonymgit.github.io/golden-dragon/" target="_blank">
-        <div class="card-emoji">🥟</div>
-        <h3>Golden Dragon</h3>
-        <p>Chinese restaurant</p>
-        <div class="arrow">View site →</div>
+        <div class="card-thumb thumb-golden">
+          <div class="mockup">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
+          </div>
+          <div class="emoji-overlay">🥟</div>
+        </div>
+        <div class="card-body">
+          <h3>Golden Dragon</h3>
+          <p>Chinese restaurant</p>
+        </div>
       </a>
       <a class="card" href="https://pseudonymgit.github.io/nailed-it/" target="_blank">
-        <div class="card-emoji">💅</div>
-        <h3>Nailed It</h3>
-        <p>Nail salon</p>
-        <div class="arrow">View site →</div>
+        <div class="card-thumb thumb-nailed">
+          <div class="mockup">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
+          </div>
+          <div class="emoji-overlay">💅</div>
+        </div>
+        <div class="card-body">
+          <h3>Nailed It</h3>
+          <p>Nail salon</p>
+        </div>
       </a>
       <a class="card" href="https://pseudonymgit.github.io/clock-tick/" target="_blank">
-        <div class="card-emoji">⏱️</div>
-        <h3>Clock Tick</h3>
-        <p>Logistics &amp; consulting</p>
-        <div class="arrow">View site →</div>
+        <div class="card-thumb thumb-clock">
+          <div class="mockup">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
+          </div>
+          <div class="emoji-overlay">⏱️</div>
+        </div>
+        <div class="card-body">
+          <h3>Clock Tick</h3>
+          <p>Logistics &amp; consulting</p>
+        </div>
       </a>
       <a class="card" href="https://pseudonymgit.github.io/joyous-psych/" target="_blank">
-        <div class="card-emoji">🧠</div>
-        <h3>Joyous Psych</h3>
-        <p>Psych evals and student advocacy</p>
-        <div class="arrow">View site →</div>
+        <div class="card-thumb thumb-joyous">
+          <div class="mockup">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
+          </div>
+          <div class="emoji-overlay">🧠</div>
+        </div>
+        <div class="card-body">
+          <h3>Joyous Psych</h3>
+          <p>Psych evals &amp; advocacy</p>
+        </div>
       </a>
       <a class="card" href="https://pseudonymgit.github.io/chaz-flores/" target="_blank">
-        <div class="card-emoji">🏠</div>
-        <h3>Chaz Flores</h3>
-        <p>Real estate</p>
-        <div class="arrow">View site →</div>
+        <div class="card-thumb thumb-chaz">
+          <div class="mockup">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
+          </div>
+          <div class="emoji-overlay">🏠</div>
+        </div>
+        <div class="card-body">
+          <h3>Chaz Flores</h3>
+          <p>Real estate</p>
+        </div>
       </a>
       <a class="card" href="https://pseudonymgit.github.io/joanna-karim-wedding/" target="_blank">
-        <div class="card-emoji">💒</div>
-        <h3>Joanna &amp; Karim</h3>
-        <p>Wedding website</p>
-        <div class="arrow">View site →</div>
+        <div class="card-thumb thumb-wedding">
+          <div class="mockup">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
+          </div>
+          <div class="emoji-overlay">💒</div>
+        </div>
+        <div class="card-body">
+          <h3>Joanna &amp; Karim</h3>
+          <p>Wedding website</p>
+        </div>
       </a>
       <a class="card" href="https://pseudonymgit.github.io/frank-lee/" target="_blank">
-        <div class="card-emoji">🎨</div>
-        <h3>Frank Lee</h3>
-        <p>Visual artist</p>
-        <div class="arrow">View site →</div>
+        <div class="card-thumb thumb-frank">
+          <div class="mockup">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line"></div>
+            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
+          </div>
+          <div class="emoji-overlay">🎨</div>
+        </div>
+        <div class="card-body">
+          <h3>Frank Lee</h3>
+          <p>Visual artist</p>
+        </div>
       </a>
     </div>
   </section>

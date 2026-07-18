@@ -44,7 +44,7 @@
     /* ── Portfolio ── */
     .portfolio {
       padding: 0 2rem 3rem;
-      max-width: 900px;
+      max-width: 1080px;
       margin: 0 auto;
     }
         .section-label {
@@ -57,7 +57,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
     }
     .card {
@@ -146,6 +146,9 @@
       font-size: 0.8rem;
     }
 
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 640px) {
       .hero { padding: 4rem 1.5rem 2rem; }
       .portfolio, .process, .services { padding-left: 1.5rem; padding-right: 1.5rem; }
@@ -199,6 +202,18 @@
         <div class="card-emoji">🏠</div>
         <h3>Chaz Flores</h3>
         <p>Real estate</p>
+        <div class="arrow">View site →</div>
+      </a>
+      <a class="card" href="https://pseudonymgit.github.io/joanna-karim-wedding/" target="_blank">
+        <div class="card-emoji">💒</div>
+        <h3>Joanna &amp; Karim</h3>
+        <p>Wedding website</p>
+        <div class="arrow">View site →</div>
+      </a>
+      <a class="card" href="https://pseudonymgit.github.io/frank-lee/" target="_blank">
+        <div class="card-emoji">🎨</div>
+        <h3>Frank Lee</h3>
+        <p>Visual artist</p>
         <div class="arrow">View site →</div>
       </a>
     </div>

@@ -83,55 +83,21 @@
       align-items: center;
       justify-content: center;
     }
-    .card-thumb .brand-bar {
+    .card-thumb img {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-    }
-    .card-thumb .mockup {
-      position: relative;
-      width: 85%;
-      height: 75%;
-      background: rgba(255,255,255,0.15);
-      border-radius: 8px;
-      backdrop-filter: blur(2px);
-      display: flex;
-      flex-direction: column;
-      padding: 0.65rem 0.65rem 0.4rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-    }
-    .mockup .mock-bar {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 0.5rem;
-    }
-    .mockup .mock-bar span {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.4);
-    }
-    .mockup .mock-line {
-      height: 3px;
-      border-radius: 2px;
-      margin-bottom: 4px;
-      background: rgba(255,255,255,0.25);
-    }
-    .mockup .mock-line:nth-child(3) { width: 60%; }
-    .mockup .mock-line:nth-child(4) { width: 40%; }
-    .mockup .mock-block {
-      flex: 1;
-      border-radius: 4px;
-      margin-top: 4px;
-      background: rgba(255,255,255,0.10);
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
     }
     .card-thumb .emoji-overlay {
       position: absolute;
-      bottom: 10px;
-      right: 12px;
-      font-size: 1.6rem;
-      opacity: 0.5;
+      bottom: 8px;
+      right: 10px;
+      font-size: 1.3rem;
+      opacity: 0.35;
+      pointer-events: none;
     }
 
     /* ── Card body ── */
@@ -241,14 +207,7 @@
     <div class="grid">
       <a class="card" href="https://pseudonymgit.github.io/pipe-dream-llc/" target="_blank">
         <div class="card-thumb thumb-pipe">
-          <div class="brand-bar" style="background:#D9784B"></div>
-          <div class="mockup">
-            <div class="mock-bar"><span></span><span></span><span></span></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
-          </div>
+          <img src="https://api.microlink.io/?url=https://pseudonymgit.github.io/pipe-dream-llc/&screenshot=true&width=600" alt="Pipe Dream LLC preview" loading="lazy" />
           <div class="emoji-overlay">🪠</div>
         </div>
         <div class="card-body">
@@ -258,13 +217,7 @@
       </a>
       <a class="card" href="https://pseudonymgit.github.io/golden-dragon/" target="_blank">
         <div class="card-thumb thumb-golden">
-          <div class="mockup">
-            <div class="mock-bar"><span></span><span></span><span></span></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
-          </div>
+          <img src="https://api.microlink.io/?url=https://pseudonymgit.github.io/golden-dragon/&screenshot=true&width=600" alt="Golden Dragon preview" loading="lazy" />
           <div class="emoji-overlay">🥟</div>
         </div>
         <div class="card-body">
@@ -274,13 +227,7 @@
       </a>
       <a class="card" href="https://pseudonymgit.github.io/nailed-it/" target="_blank">
         <div class="card-thumb thumb-nailed">
-          <div class="mockup">
-            <div class="mock-bar"><span></span><span></span><span></span></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
-          </div>
+          <img src="https://api.microlink.io/?url=https://pseudonymgit.github.io/nailed-it/&screenshot=true&width=600" alt="Nailed It preview" loading="lazy" />
           <div class="emoji-overlay">💅</div>
         </div>
         <div class="card-body">
@@ -290,13 +237,7 @@
       </a>
       <a class="card" href="https://pseudonymgit.github.io/clock-tick/" target="_blank">
         <div class="card-thumb thumb-clock">
-          <div class="mockup">
-            <div class="mock-bar"><span></span><span></span><span></span></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
-          </div>
+          <img src="https://api.microlink.io/?url=https://pseudonymgit.github.io/clock-tick/&screenshot=true&width=600" alt="Clock Tick preview" loading="lazy" />
           <div class="emoji-overlay">⏱️</div>
         </div>
         <div class="card-body">
@@ -306,13 +247,7 @@
       </a>
       <a class="card" href="https://pseudonymgit.github.io/joyous-psych/" target="_blank">
         <div class="card-thumb thumb-joyous">
-          <div class="mockup">
-            <div class="mock-bar"><span></span><span></span><span></span></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
-          </div>
+          <img src="https://api.microlink.io/?url=https://pseudonymgit.github.io/joyous-psych/&screenshot=true&width=600" alt="Joyous Psych preview" loading="lazy" />
           <div class="emoji-overlay">🧠</div>
         </div>
         <div class="card-body">
@@ -322,13 +257,7 @@
       </a>
       <a class="card" href="https://pseudonymgit.github.io/chaz-flores/" target="_blank">
         <div class="card-thumb thumb-chaz">
-          <div class="mockup">
-            <div class="mock-bar"><span></span><span></span><span></span></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
-          </div>
+          <img src="https://api.microlink.io/?url=https://pseudonymgit.github.io/chaz-flores/&screenshot=true&width=600" alt="Chaz Flores preview" loading="lazy" />
           <div class="emoji-overlay">🏠</div>
         </div>
         <div class="card-body">
@@ -338,13 +267,7 @@
       </a>
       <a class="card" href="https://pseudonymgit.github.io/joanna-karim-wedding/" target="_blank">
         <div class="card-thumb thumb-wedding">
-          <div class="mockup">
-            <div class="mock-bar"><span></span><span></span><span></span></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
-          </div>
+          <img src="https://api.microlink.io/?url=https://pseudonymgit.github.io/joanna-karim-wedding/&screenshot=true&width=600" alt="Joanna &amp; Karim preview" loading="lazy" />
           <div class="emoji-overlay">💒</div>
         </div>
         <div class="card-body">
@@ -354,13 +277,7 @@
       </a>
       <a class="card" href="https://pseudonymgit.github.io/frank-lee/" target="_blank">
         <div class="card-thumb thumb-frank">
-          <div class="mockup">
-            <div class="mock-bar"><span></span><span></span><span></span></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line"></div>
-            <div class="mock-block" style="background:rgba(255,255,255,0.08)"></div>
-          </div>
+          <img src="https://api.microlink.io/?url=https://pseudonymgit.github.io/frank-lee/&screenshot=true&width=600" alt="Frank Lee preview" loading="lazy" />
           <div class="emoji-overlay">🎨</div>
         </div>
         <div class="card-body">

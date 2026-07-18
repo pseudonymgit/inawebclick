@@ -16,7 +16,7 @@
       line-height: 1.6;
     }
 
-    /* Hero */
+    /* ── Hero ── */
     .hero {
       padding: 5rem 2rem 3rem;
       text-align: center;
@@ -26,20 +26,34 @@
     .hero h1 {
       font-family: 'DM Serif Display', serif;
       font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
     .hero h1 span { color: #7c5cfc; }
     .hero p {
       color: #888;
       font-size: 1.05rem;
-      margin-bottom: 1.5rem;
+    }
+    /* Horizontal rule */
+    hr {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.07);
+      max-width: 80px;
+      margin: 0 auto 3rem;
     }
 
-    /* Portfolio */
+    /* ── Portfolio ── */
     .portfolio {
-      padding: 0 2rem 4rem;
+      padding: 0 2rem 3rem;
       max-width: 900px;
       margin: 0 auto;
+    }
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #bbb;
+      margin-bottom: 1rem;
+      text-align: center;
     }
     .grid {
       display: grid;
@@ -67,21 +81,15 @@
     .card p { font-size: 0.85rem; color: #888; flex: 1; }
     .card .arrow { margin-top: 0.75rem; color: #7c5cfc; font-weight: 600; font-size: 0.85rem; }
 
-    /* How it works */
-    .how {
-      padding: 3rem 2rem 4rem;
+    /* ── Process ── */
+    .process {
+      padding: 0 2rem 3rem;
       max-width: 700px;
       margin: 0 auto;
-      text-align: center;
     }
-    .how h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .steps {
+    .process-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1.5rem;
     }
     .step {
@@ -89,6 +97,7 @@
       border-radius: 12px;
       padding: 1.25rem;
       border: 1px solid rgba(0,0,0,0.05);
+      text-align: center;
     }
     .step-num {
       display: inline-flex;
@@ -105,7 +114,30 @@
     .step h4 { font-size: 0.9rem; margin-bottom: 0.25rem; }
     .step p { font-size: 0.8rem; color: #888; }
 
-    /* Footer */
+    /* ── Services ── */
+    .services {
+      padding: 0 2rem 3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.75rem;
+    }
+    .service-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(0,0,0,0.05);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* ── Footer ── */
     footer {
       border-top: 1px solid rgba(0,0,0,0.05);
       padding: 1.5rem;
@@ -116,9 +148,8 @@
 
     @media (max-width: 640px) {
       .hero { padding: 4rem 1.5rem 2rem; }
-      .portfolio { padding: 0 1.5rem 3rem; }
+      .portfolio, .process, .services { padding-left: 1.5rem; padding-right: 1.5rem; }
       .grid { grid-template-columns: 1fr; }
-      .how { padding: 2rem 1.5rem 3rem; }
     }
   </style>
 </head>
@@ -126,10 +157,13 @@
 
   <section class="hero">
     <h1>In a Web <span>Click</span></h1>
-    <p>From design to live site. We take your website export and deploy it — fast, clean, and ready for your domain.</p>
+    <p>From design to live site. We collaborate with you to build, deploy, and maintain your website — fast and hassle-free.</p>
   </section>
 
+  <hr />
+
   <section class="portfolio">
+    <p class="section-label">Our work</p>
     <div class="grid">
       <a class="card" href="https://pseudonymgit.github.io/pipe-dream-llc/" target="_blank">
         <div class="card-emoji">🪠</div>
@@ -170,24 +204,42 @@
     </div>
   </section>
 
-  <section class="how">
-    <h2>How it works</h2>
-    <div class="steps">
+  <hr />
+
+  <section class="process">
+    <p class="section-label">How we work together</p>
+    <div class="process-grid">
       <div class="step">
         <div class="step-num">1</div>
-        <h4>You design</h4>
-        <p>Create in Base44, Figma, Framer — any tool you like.</p>
+        <h4>Share your vision</h4>
+        <p>Tell us about your business, style preferences, and must-have pages. We start from there.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h4>We deploy</h4>
-        <p>We handle the technical side. Live on GitHub Pages with HTTPS.</p>
+        <h4>We build it</h4>
+        <p>We design and develop the site. You review, we refine. Simple iteration loop.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h4>You own it</h4>
-        <p>The repo is yours. Transfer anytime. <br>No recurring fees.</p>
+        <h4>We launch &amp; maintain</h4>
+        <p>Live on your own domain with HTTPS, ready to go. We handle updates, changes, and growth.</p>
       </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <section class="services">
+    <p class="section-label">Everything included</p>
+    <div class="services-grid">
+      <div class="service-item">🎨 Custom design</div>
+      <div class="service-item">📱 Responsive layout</div>
+      <div class="service-item">🔍 SEO setup</div>
+      <div class="service-item">📸 Photo sourcing</div>
+      <div class="service-item">📝 Logo &amp; branding</div>
+      <div class="service-item">🔄 Site updates</div>
+      <div class="service-item">📄 Content creation</div>
+      <div class="service-item">🌐 Domain setup</div>
     </div>
   </section>
 
